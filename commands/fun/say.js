@@ -1,8 +1,8 @@
 module.exports = {
 	name: "say",
+	aliases: ["dit", "bc", "broadcast"],
 	category: "fun",
 	description: "Réécrit le message",
-	aliases: ["dit", "bc", "broadcast"],
 	usage: "<message>",
 	run: async (client, message, args) => {
 		if (message.deletable) message.delete();
