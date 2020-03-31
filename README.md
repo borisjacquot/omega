@@ -1,5 +1,7 @@
 # Omega
 
+![Logo](https://i.imgur.com/Pa5qCQ9.png)
+
 My first Discord bot using Discord.js
 
 ## Installation
@@ -15,4 +17,4 @@ TOKEN=YOUR_BOT_TOKEN
 [2] In a command prompt, use `npm install` then `node index`
 
 ## Authors
-* **Boris Jacquot** - *everything*
+* **Boris Jacquot** - *everything, INCLUDING THE LOGO*
