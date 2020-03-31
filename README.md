@@ -1,6 +1,6 @@
 # Omega
 
-![Logo](https://i.imgur.com/Pa5qCQ9.png)
+![Logo](https://i.imgur.com/bWpwGI2.png)
 
 My first Discord bot using Discord.js
 
