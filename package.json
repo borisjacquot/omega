@@ -1,12 +1,12 @@
 {
   "name": "omega",
   "version": "1.0.0",
-  "description": "",
+  "description": "My first Bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Boris Jacquot",
   "license": "ISC",
   "dependencies": {
     "ascii-table": "0.0.9",

@@ -13,7 +13,7 @@ config({
     path: __dirname + "/.env"
 });
 
-// Run the command loader
+// Récupération commandes
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 });
@@ -37,7 +37,6 @@ client.on("message", async message => {
     if (!message.guild) return;
     if (!message.content.startsWith(prefix)) return;
 
-    // If message.member is uncached, cache it.
     if (!message.member) message.member = await message.guild.fetchMember(message);
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -45,14 +44,14 @@ client.on("message", async message => {
     
     if (cmd.length === 0) return;
     
-    // Get the command
+    // On va chercher les commandes
     let command = client.commands.get(cmd);
-    // If none is found, try to find it by alias
+    // Si commande inconnue -> recherche alias
     if (!command) command = client.commands.get(client.aliases.get(cmd));
 
-    // If a command is finally found, run the command
+    // si une commande est trouvée, la lancer
     if (command) 
         command.run(client, message, args);
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN); // secret token
