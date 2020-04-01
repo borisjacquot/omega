@@ -1,14 +1,11 @@
 const { Client, Collection, MessageEmbed } = require("discord.js");
 const { config } = require("dotenv");
 const fs = require("fs");
+const Sequelize = require('sequelize');
 
 const client = new Client({
     disableEveryone: true
 })
-
-// db
-const mongoose = require("mongoose");
-mongoose.connect('mongodb+srv://admin:8HD9iYsGjOYdD4fT@omega-dqr3s.mongodb.net/test?retryWrites=true&w=majority')
 
 // Collections
 client.commands = new Collection();
