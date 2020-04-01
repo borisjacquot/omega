@@ -1,3 +1,5 @@
+const { MessageEmbed } = require("discord.js");
+
 module.exports = {
 	name: "say",
 	aliases: ["dit", "bc", "broadcast"],
@@ -13,7 +15,8 @@ module.exports = {
 
 		const embed = new MessageEmbed()
 			.setColor(roleColor)
-			.setDescription(args.join(" "));
+			.setDescription(args.join(" "))
+			.setFooter("de " + message.author.username, message.author.displayAvatarURL());
 
 		message.channel.send(embed);
 	}

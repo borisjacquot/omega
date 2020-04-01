@@ -19,7 +19,7 @@ module.exports = (client) => {
                 client.commands.set(pull.name, pull);
                 table.addRow(file, '✅');
             } else {
-                table.addRow(file, `❌`);
+                table.addRow(file, '❌');
                 continue;
             }
     

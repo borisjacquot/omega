@@ -1,5 +1,6 @@
-const { Client, Collection, RichEmbed } = require("discord.js");
+const { Client, Collection, MessageEmbed } = require("discord.js");
 const { config } = require("dotenv");
+const fs = require("fs");
 
 const client = new Client({
     disableEveryone: true
@@ -8,6 +9,8 @@ const client = new Client({
 // Collections
 client.commands = new Collection();
 client.aliases = new Collection();
+
+client.categories = fs.readdirSync("./commands/");
 
 config({
     path: __dirname + "/.env"
@@ -23,7 +26,7 @@ client.on("ready", () => {
 
     client.user.setPresence({
         status: "online",
-        game: {
+        activity: {
             name: "me getting developed",
             type: "WATCHING"
         }
@@ -31,7 +34,7 @@ client.on("ready", () => {
 })
 
 client.on("message", async message => {
-    const prefix = "_";
+    const prefix = "$";
 
     if (message.author.bot) return;
     if (!message.guild) return;
