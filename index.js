@@ -6,6 +6,10 @@ const client = new Client({
     disableEveryone: true
 })
 
+// db
+const mongoose = require("mongoose");
+mongoose.connect('mongodb+srv://admin:8HD9iYsGjOYdD4fT@omega-dqr3s.mongodb.net/test?retryWrites=true&w=majority')
+
 // Collections
 client.commands = new Collection();
 client.aliases = new Collection();
