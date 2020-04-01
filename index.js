@@ -1,7 +1,6 @@
-const { Client, Collection, MessageEmbed } = require("discord.js");
+const { Client, Collection } = require("discord.js");
 const { config } = require("dotenv");
 const fs = require("fs");
-const Sequelize = require('sequelize');
 
 const client = new Client({
     disableEveryone: true

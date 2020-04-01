@@ -8,7 +8,6 @@ module.exports = {
     description: "Retourne les infos d'un utilisateur",
     usage: "[nom | id | mention]",
     run: async (client, message, args) => {
-    	message.react('✅');
         const member = getMember(message, args.join(" "));
 
         const joined = formatDate(member.joinedAt);
@@ -38,5 +37,6 @@ module.exports = {
             embed.addField('Currently playing', stripIndents`**> Name:** ${member.user.presence.game.name}`);
 
         message.channel.send(embed);
+    	message.react('✅');
     }
 }
