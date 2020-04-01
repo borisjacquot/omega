@@ -57,4 +57,5 @@ client.on("message", async message => {
         command.run(client, message, args);
 });
 
-client.login(process.env.TOKEN); // secret token
+client.login(token); // secret token
+// remplacer token par process.env.TOKEN si votre token se trouve dans .env
