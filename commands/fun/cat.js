@@ -14,6 +14,5 @@ module.exports = {
             .setColor('#ff7979')
             .setFooter('Il est beau ce chat...');
         message.channel.send(embed);
-        message.react('✅');
 	}
 }
