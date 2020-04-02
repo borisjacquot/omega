@@ -7,6 +7,7 @@ module.exports = {
 	category: "fun",
 	description: "Envoie une photo de chat",
 	run: async (client, message, args) => {
+        if (message.deletable) message.delete();
         const { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
         const embed = new MessageEmbed()
             .setImage(file)
