@@ -18,3 +18,7 @@ TOKEN=YOUR_BOT_TOKEN
 
 ## Authors
 * **Boris Jacquot** - *everything, INCLUDING THE LOGO*
+
+## License
+
+WTFPL `LICENSE.md`
